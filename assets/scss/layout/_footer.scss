@@ -1,4 +1,105 @@
+
 .footer{
-  background: #69F0AE;
-  font-size: 64px;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  color: white;
+
+  //巢狀練習
+  //.footer-header
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px white;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+
+  //.footer .nav
+  .nav {
+    margin-bottom: 26px;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      display: none;
+    }
+    //.footer .nav-item a
+    &-item a {
+      padding: 12px 32px;
+    }
+  }
+
+  //.footer .social-list a
+  .social-list a {
+    padding: 0 16px;
+    //呼叫響應式:992px
+    @include pad{
+      padding: 0 8px;
+    }
+  }
+
+  //.footer .social-list img
+  .social-list img {
+    width: 48px;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      width:24px;
+    }
+  }
+
+  //.footer .contact-list
+  .contact-list {
+    font-size: 36px;
+    font-family: "Noto Sans TC", sans-serif;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      font-size: 16px;
+    }
+    //.footer .contact-list .material-symbols-outlined
+    .material-symbols-outlined {
+      font-size: 48px;
+      vertical-align: middle;
+      margin-right: 20px;
+      //呼叫響應式:767px
+      @include mobile-lager{
+        font-size: 24px;
+        margin-right: 8px;
+      }
+    }
+    //.footer .contact-list li:not(last-child)
+    .contact-list li:not(last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  //.footer .copyright
+  .copyright {
+    justify-content: space-between;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      flex-direction: column;
+    }
+    //.footer .copyright-text
+    &-text {
+      margin-bottom: 4px;
+    }
+  }
+
+  //.footer .privacy-list
+  .privacy-list {
+    //呼叫響應式:767px
+    @include mobile-lager{
+      flex-direction: column;
+    }
+  }
+
+  //.footer .privacy-list a
+  .privacy-list a {
+    padding:  0 24px;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      padding: 4px 0;
+    }
+  }
+
 }
+
+

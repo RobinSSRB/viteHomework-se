@@ -1,0 +1,65 @@
+/*Q&A區*/
+
+
+.title{
+    //巢狀練習
+    //.title-h1
+    &-h1{
+        font-size: 48px;
+        color: #000000;
+        border-left: 8px solid #9F1213;
+        padding-left: 16px;
+        margin-bottom: 32px;
+    }
+
+    //.title-h3
+    &-h3{
+    font-size: 24px;
+    }
+
+    //.title-h4
+    &-h4{
+        font-size: 20px;
+    }
+
+    //.title-p
+    &-p{
+        font-size: 16px;
+    }
+}
+
+.font-weight{ //標題粗體
+    font-weight: bold;
+}
+
+.pb-2{
+    padding-bottom: 8px;
+}
+
+.pb-6{
+    padding-bottom: 24px;
+}
+
+.pb-8{
+    padding-bottom: 32px;
+}
+
+.pb-24{
+    padding-bottom: 96px;
+}
+
+.mt-24{
+    margin-top: 96px;
+}
+
+.mb-12{
+    margin-bottom: 48px;
+}
+
+.mb-18{
+    margin-bottom: 64px;
+}
+
+.mb-20{
+    margin-bottom: 80px;
+}

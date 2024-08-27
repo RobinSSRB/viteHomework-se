@@ -1,5 +1,18 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+
+@import './helper/variables'; //變數檔案往前放，因為後面scss需要讀取前方的變數設定
+@import './helper/mixins'; //理由同上，會被後方檔案讀取使用
+@import './helper/utils';
+
+@import './base/reset'; //瀏覽器基本樣式清除
+@import './base/base'; //建立基本樣式
+
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
-
 @import './pages/index.scss';
+@import './pages/QandA.scss';
+@import './pages/about.scss';

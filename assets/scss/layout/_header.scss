@@ -1,4 +1,83 @@
+
 .header{
-  background: #69F0AE;
-  font-size: 64px;
+  color: white;
+  padding:16px 0; /*稍微撐大使用者體驗較好*/
+  width: 100%;
+  //呼叫響應式:767px
+  @include mobile-lager{
+    padding: 0;
+  }
+
+
+
+  //巢狀練習
+  //.header .logo
+  .logo{
+    position: relative; /*相對配置，以自己原本顯現的位置為基準位置*/
+    width: 80px;
+    height:48px;
+    text-indent: 100%; /**/
+    overflow: hidden; /**/
+    background-image: url("../images/logo-white.png");
+    background-size: contain; /**/
+    background-repeat: no-repeat; /**/
+    background-position: center; /**/
+    //呼叫響應式:767px
+    @include mobile-lager{
+      margin: 16px 12px;
+    }
+
+    //.header .logo .a
+    .a{
+      position:absolute; /*絕對配置*/
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //.header-wrapper
+  &-wrapper{ /*排列方式*/
+    justify-content: space-between;
+    align-items: center;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  //.header .nav
+  .nav{ /*字體大小*/
+    font-size: 20px;
+    //呼叫響應式:767px
+    @include mobile-lager{
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    //.header .nav-item
+    .nav-item{
+      //呼叫響應式:767px
+      @include mobile-lager{
+        text-align: center;
+        padding: 0;
+        width: 50%;
+      }
+    }
+
+
+    //.header .nav-item a
+    &-item a{ /*撐高區塊增加使用者體驗*/
+      padding: 8px 32px;
+      //呼叫響應式:767px
+      @include mobile-lager{
+        width: 100%;
+        padding: 12px 0;
+        border: solid 1px white;
+      }
+    }
+  }
 }
+
+

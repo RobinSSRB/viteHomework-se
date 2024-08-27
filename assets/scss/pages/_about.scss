@@ -1,0 +1,124 @@
+/*門市據點*/
+
+.contact-box{
+    margin-bottom: 40px;
+}
+
+.contact-title-h1{
+    margin-bottom: 32px;
+    border-left: 8px solid #9F1213;
+    padding-left: 16px;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.contact-title-h2 {
+    font-size: 36px;
+}
+
+.contact-title-h3 {
+    font-size: 24px;
+}
+
+.contact-title-h4 {
+    font-size: 20px;
+}
+
+.contact-area {
+    align-items: center;
+}
+
+
+.select{
+    width: 307px;
+    border: 1px solid #CED4DA;
+    margin-left: 16px;
+    padding: 6px 12px;
+    font-size: 18px;
+}
+
+
+.select-place {
+    background-position: right 0.5em top 50%, 0 0;
+    background-size: contain, cover;
+    background-repeat: no-repeat, repeat;
+}
+
+.la-mb-8 {
+    margin-bottom: 32px;
+}
+
+.la-mr-2 {
+    margin-right: 11px;
+}
+
+.la-mb-18 {
+    margin-bottom: 15px;
+}
+
+.la-mb-19{
+    margin-bottom: 16px;
+}
+
+.la-ml-27{
+    margin-left: 27px;
+}
+
+.store {
+    flex-wrap: wrap;
+    margin: 0 -12px;
+}
+
+.card-30 {
+    width: 30%;
+    padding: 0 12px;
+    margin-bottom: 48px;
+}
+
+.info {
+    border: 1px solid #00000020;
+}
+
+.info-ul {
+    padding: 8px 24px;
+}
+
+.info-li-1 {
+    padding: 16px 0px;
+
+}
+
+.info-li-2 {
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+.info-b {
+    border-bottom: 1px solid #00000020;
+}
+
+.info-img {
+    max-width: 18px;
+    margin-right: 8px;
+}
+
+.card-fd-column {
+    flex-direction: column;
+}
+
+.card .btn {
+    font-size: 19px;
+    background-color: black;
+    text-align: center;
+}
+
+.card .btn a {
+    padding: 16px 0;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.card .btn a:hover {
+    background-color: #aa0601;
+}

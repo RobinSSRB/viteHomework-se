@@ -1,3 +1,393 @@
-.index-title {
-  font-size: 100px;
+/*pages區*/
+
+/*banner區設定*/
+.banner {
+    color: $secondary; /*顏色用變數設定*/
+    background-image: url("../images/home-header.png");
+    background-size: cover; /*調整圖片大小*/
+    height: calc(100vh - 80px); /*計算*/
+    //呼叫響應式:992px
+    @include pad{
+        background-image: url("../images/home-header-sm.png");
+    }
+
+    //巢狀練習
+    //.banner-wrapper
+    &-wrapper{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    //.banner-title
+    &-title {
+        font-size: 64px;
+        font-weight: 700;
+        //呼叫響應式:767px
+        @include mobile-lager{
+            font-size:24px;
+        }
+    }
+
+    //.banner-subtitle
+    &-subtitle {
+        font-size: 36px;
+        //call RWD:767px
+        @include mobile-lager{
+            font-size: 16px;
+        }
+    }
+
+    //.banner-link
+    &-link { /*"立刻購買的設定"*/
+        padding: 6px 12px;
+        color: white;
+        background: $primary;
+        font-size: 20px;
+    }
+}
+
+/*feature區設定*/
+.feature-list { /*標題文字、卡片排列設定*/
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    //call RWD:576px
+    @include mobile-lager{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    //.feature-list .card
+    .card {
+        width: calc(25% - 18px);
+        //call RWD:992px
+        @include pad{
+            width: calc(50% - 12px);
+        }
+        //call RWD:576px
+        @include mobile-lager{
+            width: 100%;
+        }
+        //.feature-list .card-header
+        &-header {/*文字排版設定*/
+            margin-bottom: 8px;
+        }
+        //.feature-list .card-title
+        &-title {/*卡片標題格式設定*/
+            font-size: 24px;
+            font-weight: 700;
+            color: $secondary;
+        }
+        //.feature-list .card-img
+        &-img { /*卡片圖案格式設定*/
+            width:100px;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+
+/*經典系列設定*/
+
+.classic-list{ /*經典鏡框圖片外框區*/
+    display: flex;
+    gap: 24px;
+    //call RWD:992px
+    @include pad{
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .card{
+        //巢狀練習
+        //.classic-list .card-title
+        &-title{ /*標題文字設定*/
+        font-size: 48px;
+        color: $primary;
+        font-style: italic;
+        font-weight: 900;
+        text-align: center;
+    
+        //call RWD:336px
+        @include mobile{
+            max-width: 336px;
+        }
+
+        //call RWD:576px
+        @include mobile-lager{
+            max-width: 348px;
+        }
+    }
+    }
+}
+
+
+/*顧客推薦區設定*/
+.recommend-list {
+    display: flex;
+    gap: 24px;
+    //call RWD:992px
+    @include pad{
+        flex-wrap: wrap;
+    }
+    //call RWD:576px
+    @include mobile-lager{
+        flex-wrap: wrap;
+    }
+
+    //巢狀練習
+    //.recommend-list .card
+    .card {
+        box-shadow: 0px 2px 6px #00000029;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        //call RWD:992px
+        @include pad{
+            width: calc(50% - 12px);
+        }
+        //call RWD:576px
+        @include mobile-lager{
+            width: 100%;
+        }
+
+        //.recommend-list .card-body
+        &-body { /*卡片中間區*/
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        //.recommend-list .card-desc
+        &-desc { 
+            margin-bottom: 72px;
+        }
+
+        //.recommend-list .card-title
+        &-title {
+            margin-bottom: 8px;
+        }
+
+        //.recommend-list .card-time
+        &-time {
+            color: #707070;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    }
+}
+
+
+
+
+/*聯名設計設定區*/
+.cobrand { /*純文字D+Y區背景設定*/
+    background-image: url("../images/index-bg.png");
+    background-size: cover;
+
+    //巢狀練習
+    //.cobrand-text-white
+    &-text-white { /*純文字標題設定*/
+        color: white;
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 48px;
+        text-align: center;
+    }
+
+    //.cobrand-list
+    &-list {
+        display: flex;
+        //call RWD:992px
+        @include pad{
+            flex-wrap: wrap;
+        }
+
+
+        //.cobrand-list .card
+        .card {
+            width: 50%;
+            //call RWD:992px
+            @include pad{
+                width: 100%;
+                max-width: 696px;
+            }
+
+            //.cobrand-list .card-title
+            &-title {
+                font-size: 48px;
+                font-style: italic;
+                color: $primary;
+                font-weight: 900;
+                text-align: center;
+                background: white;
+            }
+
+            //.cobrand-list .card-img
+            &-img {
+                height: 240px;
+                background-position: center;
+            }
+
+            //.cobrand-list .card-img-double(巢狀不要超過四層)
+            &-img-double { /*DOUBLE A+*/
+                background-image: url("../images/home-section4-1.png");
+                background-size: cover;
+                //call RWD:576px
+                @include mobile-lager{
+                    background-image: url("../images/home-section4-1-sm.png");
+                    background-size: cover;
+                }
+            }
+
+            //.cobrand-list .card-img-youth(巢狀不要超過四層)
+            &-img-youth { /*Youth*/
+                background-image: url("../images/home-section4-2.png");
+                background-size: cover;
+                //call RWD:576px
+                @include mobile-lager{
+                    background-image: url("../images/home-section4-2-sm.png");
+                    background-size: cover;
+                }
+            }
+        }
+
+        //.cobrand-list .card:not(last-child)
+        .card:not(last-child) {
+            //call RWD:992px
+            @include pad{
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+
+/*聯絡我們區設定*/
+.contact-form {
+    max-width: 636px;
+    margin: 0 auto;
+    //call RWD:992px
+    @include pad{
+        max-width: 576px;
+    }
+}
+
+.contact-desc {
+    margin-bottom: 24px;
+    font-size: 20px;
+}
+
+.contact-form-input {
+    display: block;
+    width: 90%;
+    background: $bg-light;
+    outline: 0;
+    border: solid 1px black;
+    padding: 6px 12px;
+    font-size: 16px;
+}
+
+.contact-form-input::placeholder {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-list textarea {
+    resize: none;
+}
+
+.contact-list li:not(last-child) {
+    margin-bottom: 16px;
+}
+
+.contact-list .agree-item {
+    margin-bottom: 48px;
+}
+
+.contact-list .agree-item input {
+    display: none;
+}
+
+.contact-list .agree-item label {
+    position: relative;
+    padding-left: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-list .agree-item label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    border: solid 2px #000;
+    background: $bg-light;
+    border-radius: 2px;
+}
+
+.contact-list .agree-item label::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border-bottom: solid 2px white;
+    border-right: solid 2px white;
+    transform: rotate(45deg);
+}
+
+.contact-list .agree-item input:checked ~ label::before {
+    background: #000;
+}
+
+.contact-list .agree-item input::checked ~ label::after {
+    display: block;
+}
+
+.contact-form-btn {
+    display: block;
+    width: 100%;
+    max-width: 416px;
+    background: $primary;
+    color: white;
+    border: none;
+    padding: 16px 0px;
+    margin:  0 auto;
+}
+
+.index-title { /*標題文字*/
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 48px;
+    text-align: center;
+    color: $secondary;
+    //call RWD:576px
+    @include mobile-lager{
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.content-padding {
+    padding: 80px 0;
+    //call RWD:576px
+    @include mobile-lager{
+        padding: 40px 0;
+    }
 }
